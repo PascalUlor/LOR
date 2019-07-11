@@ -8,7 +8,7 @@ const server = express();
 
 server.use(express.json());
 server.use(cors());
-
+server.use(express.static(path.join(__dirname, "./userlog/public")));
 server.get("/api/users/", (req, res) => {
   Users.find()
     .then(users => {
