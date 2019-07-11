@@ -4,7 +4,7 @@ import styled from "styled-components";
 import CharCard from "./components/CharCard";
 import CharForm from "./components/CharForm";
 
-const baseUrl = `http://localhost:3000/api/users`;
+const baseUrl = `https://lord-of-d-rings.herokuapp.com/api/users`;
 
 function App() {
   const [chars, setChars] = useState([]);
@@ -15,6 +15,7 @@ function App() {
   });
 
   const addChar = event => {
+    event.preventDefault();
     let CharDeet = {
       name: newChar.name,
       bio: newChar.bio
