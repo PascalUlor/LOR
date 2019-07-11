@@ -8,7 +8,7 @@ const server = express();
 
 server.use(express.json());
 server.use(cors());
-// server.use(express.static(path.join(__dirname, "./client/public")));
+server.use(express.static(path.join(__dirname, "./client/public/index.html")));
 server.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
